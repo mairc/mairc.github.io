@@ -22,9 +22,8 @@ by the Mozilla Public License, version 2.0.
             font-weight: normal;
             padding: 0;
             margin: auto;
-            margin-top: calc(.25in - 1em);
-            margin-bottom: calc(.25in - 1em);
-            max-width: 900px;
+            max-width: 800px;
+            background-color: #F0FFFF;
         }
 
         #sheet {
@@ -69,8 +68,9 @@ by the Mozilla Public License, version 2.0.
             grid-area: personal;
             display: grid;
             grid-template:
-                "portrait identity player points"
-                "portrait description description points";
+                "portrait identity identity points"
+                "portrait player player points"
+                "portrait description description description";
             grid-template-columns: 0fr 1fr 1fr 0fr;
             grid-gap: .05in;
         }
@@ -88,9 +88,9 @@ by the Mozilla Public License, version 2.0.
 
         .portrait {
             font-size: medium;
-            width: 6.75em;
-            height: 9em;
-            background-image: url(&#1060;&#1072;&#1085;&#1085;&#1080;%20&#1052;&#1072;&#1076;&#1100;&#1103;&#1088;.png);
+            width: 12em;
+            height: 16em;
+            background-image: url(1.png);
             background-size: cover;
         }
 
@@ -253,7 +253,7 @@ by the Mozilla Public License, version 2.0.
             text-align: right;
             padding-left: .2em;
             padding-right: .2em;
-            font-size: 80%;
+            font-size: 100%;
             white-space: nowrap;
             align-self: center;
         }
@@ -365,7 +365,7 @@ by the Mozilla Public License, version 2.0.
         #equipment .sum_weight:nth-child(even),
         #equipment .ref:nth-child(odd),
         #notes .desc:nth-child(even) {
-            background-color: #dbdbdb;
+            background-color: #F0F8FF;
         }
 
         #equipment .desc,
@@ -559,11 +559,14 @@ by the Mozilla Public License, version 2.0.
 
         .list_note {
             font-size: 80%;
+            font-style: italic;
+            color: #808080;
         }
     </style>
 </head>
 
 <body>
+            <div><h2>&#1060;&#1072;&#1085;&#1085;&#1080; &quot;&#1063;&#1077;&#1090;&#1099;&#1077;&#1088; &#1087;&#1072;&#1083;&#1100;&#1094;&#1072;&quot; &#1052;&#1072;&#1076;&#1100;&#1103;&#1088; - Архив Сардинки</h3></div>
     <div id="sheet">
         <div id="personal">
             <div id="portrait">
@@ -579,6 +582,8 @@ by the Mozilla Public License, version 2.0.
                     <div class="field">&#1042;&#1077;&#1083;&#1080;&#1082;&#1086;&#1083;&#1077;&#1087;&#1085;&#1099;&#1081; &#1089;&#1090;&#1088;&#1077;&#1083;&#1086;&#1082; </div>
                     <div class="label">Religion:</div>
                     <div class="field"></div>
+                    <div class="label">Link:</div>
+                    <div class="field">fanny.gcs</div>
                 </div>
             </div>
             <div id="player">
@@ -1078,6 +1083,13 @@ by the Mozilla Public License, version 2.0.
             </div>
             <div class="pts satisfiedY">-1</div>
             <div class="ref satisfiedY">B163</div>
+            
+            <div class="desc indent0 satisfiedY">Advantage
+                <div class="list_note satisfiedY"></div>
+                <div class="list_note satisfiedY"></div>
+            </div>
+            <div class="pts satisfiedY">0</div>
+            <div class="ref satisfiedY"></div>
             
         </div>
         <div id="skills">
