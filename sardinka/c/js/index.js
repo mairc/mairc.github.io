@@ -11752,6 +11752,8 @@ function init() {
 }
 
 function setupEvents() {
+
+  setupParallax();
   setupWeather();
   setupFlash();
 }
