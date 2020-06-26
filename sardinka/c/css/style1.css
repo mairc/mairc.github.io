@@ -144,10 +144,12 @@
 
 .slide__element_name{
 	font-size: 20em;
+	font-weight: 200;
 }
 
 .slide__element_under_name {
 	font-size: 20em;
+	font-weight: 200;
 }
 
 @media screen and (max-height: 39em) {
