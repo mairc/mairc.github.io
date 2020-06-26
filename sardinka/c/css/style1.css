@@ -93,7 +93,7 @@
 .nav-item {
 	display: block;
 	padding: 1em;
-	color: #252445;
+	color: #808080;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
@@ -119,7 +119,7 @@
 
 .slide__element {
 	opacity: 0;
-	color: #252445;
+	color: #fff;
 	-webkit-transform: translate3d(0, 50px, 0);
 	transform: translate3d(0, 50px, 0);
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -142,14 +142,12 @@
 	font-size: 0.25em;
 }
 
-.slide__element--info {
-	font-size: 2em;
+.slide__element_name{
+	font-size: 3em;
 }
 
-.slide__element--date {
-	font-size: 1em;
-	font-weight: 700;
-	margin: 0 0 1em;
+.slide__element_under_name {
+	font-size: 2em;
 }
 
 @media screen and (max-height: 39em) {

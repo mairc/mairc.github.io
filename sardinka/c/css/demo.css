@@ -24,8 +24,8 @@
 }
 
 body {
-	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	color: #252445;
+	font-family: "Alegreya", Helvetica, Arial, sans-serif;
+	color: #808080;
 	background: #aaa;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -105,7 +105,7 @@ a:focus {
 	left: 50%;
 	width: 1px;
 	height: 110%;
-	background: #252445;
+	background: #2808080;
 	content: '';
 	-webkit-transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
 	transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
