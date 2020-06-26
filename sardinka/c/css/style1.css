@@ -142,14 +142,12 @@
 	font-size: 0.25em;
 }
 
-.slide__element_name{
-	font-size: 20em;
-	font-weight: 200;
+.slide__element.slide_under_name{
+	font-size: 6em;
 }
 
-.slide__element_under_name {
-	font-size: 20em;
-	font-weight: 200;
+.slide__element.slide_under_name{
+	font-size: 5em;
 }
 
 @media screen and (max-height: 39em) {
