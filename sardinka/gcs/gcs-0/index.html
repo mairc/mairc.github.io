@@ -1,73 +1,1057 @@
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Вики ролевого проетка и сеттига Скользская Сардина">
+      
+      
+        <link rel="canonical" href="https://mairc.github.io/gcs/gcs-0/">
+      
+      
+        <meta name="author" content="Mairc, Paul, Yurii, Anton, Maria and al.">
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+    
+    
+      
+        <title>Основы GCS. Часть 0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.545621a7.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.36d1b78f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Alegreya",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
   
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="keywords" content="GURPS, roleplay, trpg, steampunk">
-    <meta name="description" content="НРИ проект по системе GURPS. Викторианская Англия, ~1850 год.">
-    <meta name="author" content="2016 Mairc, Paul, Yurii, Anton, Maria and al.">
-
-    <title>Часть 0 · Slippery △ Sardine</title>
-
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../css/alabaster.css" type="text/css">
-    <link rel="stylesheet" href="../../css/alabaster-overrides.css" type="text/css">
-    <link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type='text/css'>
-    
-    
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="https://mairc.github.io/js/button_down.js"></script>
-    <script src="https://mairc.github.io/js/anchor.min.js"></script>
-
-    
-
-    
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-66002235-2', 'sardinka.org');
-        ga('send', 'pageview');
-      </script>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
-    
   
-</head>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gcs-0" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://mairc.github.io" title="Slippery △ Sardine" class="md-header-nav__button md-logo" aria-label="Slippery △ Sardine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
 
-<div id="top-link">
-  <a href="#top"></a>
-    <i></i>
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Slippery △ Sardine
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Основы GCS. Часть 0
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<body>
-  <div class="document">
-    <div class="documentwrapper">
-      <div class="bodywrapper">
-        <div class="body" role="main">
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
           
-            <h1 id="gcs-0">Основы GCS. Часть 0</h1>
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Новоприбывшим
+      </a>
+    
+  </li>
+
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ooc/about/" class="md-tabs__link md-tabs__link--active">
+          Вводная
+        </a>
+      
+  
+
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../wiki/cosmos/" class="md-tabs__link">
+          Вики
+        </a>
+      
+  
+
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../wiki/newspaper-12/" class="md-tabs__link">
+          Газеты
+        </a>
+      
+  
+
+
+      
+      <li class="md-tabs__item">
+        <a href="/cementery" class="md-tabs__link">
+          Дом Фальке
+        </a></li>
+        <li class="md-tabs__item">
+        <a href="/map" class="md-tabs__link">
+          Карта
+        </a></li>
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://mairc.github.io" title="Slippery △ Sardine" class="md-nav__button md-logo" aria-label="Slippery △ Sardine">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
+
+    </a>
+    Slippery △ Sardine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Новоприбывшим" class="md-nav__link">
+      Новоприбывшим
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Вводная
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Вводная" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Вводная
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/about/" title="О проекте" class="md-nav__link">
+      О проекте
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/about-us/" title="О нас" class="md-nav__link">
+      О нас
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/same-page/" title="Синхронизатор ожиданий" class="md-nav__link">
+      Синхронизатор ожиданий
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/contract/" title="Социальный договор" class="md-nav__link">
+      Социальный договор
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/rules/" title="Правилами создания и развития персонажа" class="md-nav__link">
+      Правилами создания и развития персонажа
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6" checked>
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Основы GCS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Основы GCS" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Основы GCS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Часть 0
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Часть 0" class="md-nav__link md-nav__link--active">
+      Часть 0
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Установка Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gurps-character-sheet" class="md-nav__link">
+    Установка GURPS Character Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gcs" class="md-nav__link">
+    Русификация GCS
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gcs-1/" title="Часть 1" class="md-nav__link">
+      Часть 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gcs-2/" title="Часть 2" class="md-nav__link">
+      Часть 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/pc/" title="Вопросы по квенте" class="md-nav__link">
+      Вопросы по квенте
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ooc/links/" title="Ссылки" class="md-nav__link">
+      Ссылки
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Вики
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Вики" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Вики
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/cosmos/" title="О сотворении Мира" class="md-nav__link">
+      О сотворении Мира
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/gods/" title="Боги" class="md-nav__link">
+      Боги
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/race/" title="Расы" class="md-nav__link">
+      Расы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/languages/" title="Языки" class="md-nav__link">
+      Языки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Государства
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Государства" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Государства
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/empire/" title="Вторая Великая и Неделимая Империя Человечества" class="md-nav__link">
+      Вторая Великая и Неделимая Империя Человечества
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/thing/" title="Тинг Дворфов" class="md-nav__link">
+      Тинг Дворфов
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/sultanate/" title="Финийский Султанат" class="md-nav__link">
+      Финийский Султанат
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/forest/" title="Вечнолесье" class="md-nav__link">
+      Вечнолесье
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/island/" title="Мир Высших Эльфов" class="md-nav__link">
+      Мир Высших Эльфов
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/republic/" title="Республика Бриеле" class="md-nav__link">
+      Республика Бриеле
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/confederation/" title="Конфедерация Вольных Городов" class="md-nav__link">
+      Конфедерация Вольных Городов
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/freehold/" title="Веспианов Фригольд" class="md-nav__link">
+      Веспианов Фригольд
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Другое
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Другое" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Другое
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/calendar/" title="Календарь" class="md-nav__link">
+      Календарь
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/currency/" title="Валюты" class="md-nav__link">
+      Валюты
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/rank/" title="Звания и статус" class="md-nav__link">
+      Звания и статус
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/corporation/" title="Мировые корпорации" class="md-nav__link">
+      Мировые корпорации
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/thaumatology/" title="Тауматология (Магия)" class="md-nav__link">
+      Тауматология (Магия)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Инвентарь
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Инвентарь" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Инвентарь
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/inventory/" title="Снаряжение" class="md-nav__link">
+      Снаряжение
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/revolvers/" title="Револьверы" class="md-nav__link">
+      Револьверы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/rifles/" title="Винтовки и ружья" class="md-nav__link">
+      Винтовки и ружья
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/melee/" title="Холодное оружие" class="md-nav__link">
+      Холодное оружие
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/other/" title="Другое оружие" class="md-nav__link">
+      Другое оружие
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/inventory/armor/" title="Одежда и броня" class="md-nav__link">
+      Одежда и броня
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/guild/" title="О Гильдия" class="md-nav__link">
+      О Гильдия
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/guildbook/" title="Учётная книга" class="md-nav__link">
+      Учётная книга
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Газеты
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Газеты" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Газеты
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/newspaper-12/" title="Газета №12 — Имперский писака" class="md-nav__link">
+      Газета №12 — Имперский писака
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/newspaper-13/" title="Газета №13 — Фена Пост" class="md-nav__link">
+      Газета №13 — Фена Пост
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/newspaper-14/" title="Газета №14 — Альянс Таймс" class="md-nav__link">
+      Газета №14 — Альянс Таймс
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Установка Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gurps-character-sheet" class="md-nav__link">
+    Установка GURPS Character Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gcs" class="md-nav__link">
+    Русификация GCS
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="gcs-0">Основы GCS. Часть 0<a class="headerlink" href="#gcs-0" title="Permanent link">&para;</a></h1>
 <p>&hellip;в которой герой приручил дракона и обучил принцессу своему языку.</p>
-<p>В этой части мы установим Java и GCS<sup id="fnref:gcs"><a class="footnote-ref" href="#fn:gcs" rel="footnote">1</a></sup>, а также русифицируем его. </p>
+<p>В этой части мы установим Java и GCS<sup id="fnref:gcs"><a class="footnote-ref" href="#fn:gcs">1</a></sup>, а также русифицируем его. </p>
 <p>Или можете скачать готовый перевод:</p>
 <ul>
-<li><a href="https://mairc.github.io/files/gcs-windows-64.zip">Windows 64bit</a>; </li>
-<li><a href="https://mairc.github.io/files/gcs-windows-32.zip">Windows 32bit</a>; </li>
-<li><a href="https://mairc.github.io/files/gcs-mac.zip">macOS</a>;</li>
-<li><a href="https://mairc.github.io/files/gcs-linux-64.zip">Linux 64bit</a>;</li>
-<li><a href="https://mairc.github.io/files/gcs-linux-32.zip">Linux 32bit</a>. </li>
+<li><a href="https://sardinka.org/files/gcs-windows-64.zip">Windows 64bit</a>; </li>
+<li><a href="https://sardinka.org/files/gcs-windows-32.zip">Windows 32bit</a>; </li>
+<li><a href="https://sardinka.org/files/gcs-mac.zip">macOS</a>;</li>
+<li><a href="https://sardinka.org/files/gcs-linux-64.zip">Linux 64bit</a>;</li>
+<li><a href="https://sardinka.org/files/gcs-linux-32.zip">Linux 32bit</a>. </li>
 </ul>
-<p>Если вы уже сделали это переходите к <a href="https://mairc.github.io/gcs/gcs-1/">Части один</a>, где мы начнем создавать нового персонажа.</p>
-<h2 id="java">Установка Java</h2>
+<p>Если вы уже сделали это переходите к <a href="https://sardinka.org/gcs/gcs-1/">Части один</a>, где мы начнем создавать нового персонажа.</p>
+<h2 id="java">Установка Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <p>Сначала нам понадобится скачать и установить Java. Переходим на <a href="https://java.com/en/download">официальный сайт Java</a>:</p>
 <p><a href="https://java.com/en/download"><img alt="Сайт java.com" src="http://i.imgur.com/uBS75dt.png" title="Java.com" /></a></p>
 <!-- more -->
 
-<p>Нажимаем на большую красную кнопку «<a href="https://java.com/inc/BrowserRedirect1.jsp?locale=ru">Free Java Download</a>». Далее подтверждаем сохранение файла<sup id="fnref:file"><a class="footnote-ref" href="#fn:file" rel="footnote">2</a></sup>, ждем пока он загрузится. После чего запускаем его и проходим ряд шагов:</p>
+<p>Нажимаем на большую красную кнопку «<a href="https://java.com/inc/BrowserRedirect1.jsp?locale=ru">Free Java Download</a>». Далее подтверждаем сохранение файла<sup id="fnref:file"><a class="footnote-ref" href="#fn:file">2</a></sup>, ждем пока он загрузится. После чего запускаем его и проходим ряд шагов:</p>
 <p><img alt="Java Setup — Welcome" src="http://i.imgur.com/VoaF4hD.png" title="Java Setup - Welcome" /></p>
 <p>Нажимаем «Install».</p>
 <p><img alt="Java Setup — Progress" src="http://i.imgur.com/KeKckae.png" title="Java Setup - Progress" /></p>
@@ -76,18 +1060,18 @@
 <p>Всё ещё ждём.</p>
 <p><img alt="Java Setup — Complete" src="http://i.imgur.com/SKVGRdG.png" title="Java Setup - Complete" /></p>
 <p>Установка успешно завершена, нажимаем «Close».</p>
-<h2 id="gurps-character-sheet">Установка GURPS Character Sheet</h2>
+<h2 id="gurps-character-sheet">Установка GURPS Character Sheet<a class="headerlink" href="#gurps-character-sheet" title="Permanent link">&para;</a></h2>
 <p>Заходим на <a href="http://gurpscharactersheet.com">сайт программы GCS</a>: </p>
 <p><a href="http://gurpscharactersheet.com"><img alt="Imgur" src="http://i.imgur.com/3Jk35vn.png" title="gurpscharactersheet.com" /></a></p>
-<p>И нажимаем соответствующую вашей операционной системе иконку<sup id="fnref:os"><a class="footnote-ref" href="#fn:os" rel="footnote">3</a></sup>. Ждем загрузки файла. После чего находим его в проводнике<sup id="fnref:path"><a class="footnote-ref" href="#fn:path" rel="footnote">4</a></sup> нажимаем ПКМ → Распаковать всё → Распаковать → Заходим в распакованную папку → Находим «gcs.exe» → Запускаем:</p>
+<p>И нажимаем соответствующую вашей операционной системе иконку<sup id="fnref:os"><a class="footnote-ref" href="#fn:os">3</a></sup>. Ждем загрузки файла. После чего находим его в проводнике<sup id="fnref:path"><a class="footnote-ref" href="#fn:path">4</a></sup> нажимаем ПКМ → Распаковать всё → Распаковать → Заходим в распакованную папку → Находим «gcs.exe» → Запускаем:</p>
 <p><a href="http://i.imgur.com/kJlmzR4.gif"><img alt="Кликабельно" src="http://i.imgur.com/kJlmzR4.gif" /></a></p>
-<p>Кликабельно<sup id="fnref:click"><a class="footnote-ref" href="#fn:click" rel="footnote">5</a></sup>.</p>
+<p>Кликабельно<sup id="fnref:click"><a class="footnote-ref" href="#fn:click">5</a></sup>.</p>
 <p>Все работает, отлично!</p>
-<h2 id="gcs">Русификация GCS</h2>
+<h2 id="gcs">Русификация GCS<a class="headerlink" href="#gcs" title="Permanent link">&para;</a></h2>
 <p>После этого можно приступить к русификации. Для этого зайдем в группу <a href="https://vk.com/gurpsvk">vk.com/gurpsvk</a> → <a href="https://vk.com/board3656533">Обсуждения</a> → <a href="https://vk.com/topic-3656533_30663617">Перевод Gurps Character Sheet</a>:</p>
 <p><a href="https://vk.com/topic-3656533_30663617"><img alt="GURPSvk – Перевод Gurps Character Sheet" src="http://i.imgur.com/sxs5Xhl.png" title="VK - Перевод Gurps Character Sheet" /></a></p>
 <p>P.S. Не забываем благодарить <a href="https://vk.com/masoku">Станислава Малуша</a> за перевод.</p>
-<p>Cкачиваем последнюю версию файла &ldquo;<a href="https://cloud.mail.ru/public/i2dMPUF9fuL6/Library.rar">Library.rar</a>&rdquo; → Распаковываем<sup id="fnref:7z"><a class="footnote-ref" href="#fn:7z" rel="footnote">6</a></sup> → Копируем содержимое в папку GCS с заменой:</p>
+<p>Cкачиваем последнюю версию файла &ldquo;<a href="https://cloud.mail.ru/public/i2dMPUF9fuL6/Library.rar">Library.rar</a>&rdquo; → Распаковываем<sup id="fnref:7z"><a class="footnote-ref" href="#fn:7z">6</a></sup> → Копируем содержимое в папку GCS с заменой:</p>
 <p><a href="http://i.imgur.com/anqgwf0.gifv"><img alt="Распаковка Library.rar" src="http://i.imgur.com/anqgwf0.gif" /></a></p>
 <p><a href="http://i.imgur.com/9GM8b4L.png" title="GUPRS Workspace"><img alt="Окно программы GCS с русскими библиотеками" src="http://i.imgur.com/9GM8b4L.png" title="GUPRS Workspace" /></a></p>
 <p>Поздравляю, вы установили и русифицировали Gurps Character Sheet. В следующих частях мы научимся создавать нового персонажа с помощь готовых библиотек навыков/преимуществ, а также создать свои навыки/преимущества и снаряжение. </p>
@@ -97,145 +1081,123 @@
 <hr />
 <ol>
 <li id="fn:gcs">
-<p>Gurps Character Sheet;&#160;<a class="footnote-backref" href="#fnref:gcs" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Gurps Character Sheet;&#160;<a class="footnote-backref" href="#fnref:gcs" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:file">
-<p>В моем случаи это “jre-8u51-windows-x64.exe”;&#160;<a class="footnote-backref" href="#fnref:file" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>В моем случаи это “jre-8u51-windows-x64.exe”;&#160;<a class="footnote-backref" href="#fnref:file" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:os">
-<p>Windows 64-bit в моем случае;&#160;<a class="footnote-backref" href="#fnref:os" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Windows 64-bit в моем случае;&#160;<a class="footnote-backref" href="#fnref:os" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:path">
-<p>У меня это “/User/Downloads”;&#160;<a class="footnote-backref" href="#fnref:path" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>У меня это “/User/Downloads”;&#160;<a class="footnote-backref" href="#fnref:path" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:click">
-<p>Гифки и картинки кликабельны;&#160;<a class="footnote-backref" href="#fnref:click" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>Гифки и картинки кликабельны;&#160;<a class="footnote-backref" href="#fnref:click" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7z">
-<p>Я использую бесплатный open source архиватор <a href="http://www.7-zip.org/download.html">7-zip</a>.&#160;<a class="footnote-backref" href="#fnref:7z" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>Я использую бесплатный open source архиватор <a href="http://www.7-zip.org/download.html">7-zip</a>.&#160;<a class="footnote-backref" href="#fnref:7z" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
-            
-               
-<hr>
-  <h4>Читать дальше:</h4>
-  <center>
-  <ul class="pagination">
-    
-      <li><a href="../../ooc/rules/" title="previous chapter">« Правилами создания и развития персонажа</a>
-      </li>
-    
-    
-      <li><a href="../gcs-1/" title="next chapter">Часть 1 »</a>
-      </li>
-    
-  </ul>
-  </center>
+                
+                  
+                
+              
+              
+                
 
-             
-          
+
+              
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-      <div class="sphinxsidebarwrapper">
-        
-  <p class="logo">
-    <a href="../..">
-      <img class="logo" src="../../logo.png" title="Скользкая △ Сардина">
-    </a>
-  </p>
-  
-
-
-
-        
-
-
-
-
-<h3>Содержание</h3>
-
-
-<nav>
-
-  
-  
-    <ol>
-    
-      <li><a href="#java">Установка Java</a></li>
-      <ol>
-    
-  </ol>
-    
-      <li><a href="#gurps-character-sheet">Установка GURPS Character Sheet</a></li>
-      <ol>
-    
-  </ol>
-    
-      <li><a href="#gcs">Русификация GCS</a></li>
-      <ol>
-    
-  </ol>
-    
-  </ol>
-  
-
-  
-    <ul>
-        <li class="toctree-l1"><a href="https://mairc.github.io/sardinka/wiki/list/">ВИКИ</a></li>
-        <li class="toctree-l1"><a href="https://vk.com/slipperysardine">ГРУППА VK</a></li>
-        <li class="toctree-l1"><a href="https://bit.ly/sardinka-anketa">АНКЕТА</a></li>
-        <li class="toctree-l1"><a href="https://www.dropbox.com/request/3Bm5DMfKUcgGL8wR8gyV">ОТПРАВИТЬ ПЕРСОНАЖА</a></li>
-        <li class="toctree-l1"><a href="https://drive.google.com/open?id=0B34JLyvIKHCiQmdadzQ3ZzdneEE">GURPS-КНИГИ</a></li>
-        <li class="toctree-l1"><a href="https://www.dropbox.com/sh/hp3t087pbp6pzsr/AAC50lJku14QxiQ_fEVOZ7H-a?dl=0">GCS-БИБЛИОТЕКИ</a></li>
-        <li class="toctree-l1"><a href="https://mairc.github.io/gcs/gcs-1/">GCS-ПОМОЩЬ</a></li>
-        <li class="toctree-l1"><a href="https://mairc.github.io/ooc/links/#gurps-character-sheet">GCS-СКАЧАТЬ</a></li>
-        <li class="toctree-l1"><a href="https://vk.com/topic-98916594_32099212">УЧЁТНАЯ КНИГА</a></li>
-        <li class="toctree-l1"><a href="https://vk.com/topic-98916594_32102639">ЗАДАНИЯ</a></li>
-        <li class="toctree-l1"><a href="https://vk.com/topic-98916594_32262209">ОТЧЁТЫ</a></li>
-        <li class="toctree-l1"><a href="https://mairc.github.io/sardinka/cemetery/#grave-41">ДОМ ФАЛЬКЕ</a></li>
-        <li class="toctree-l1"><a href="https://mairc.github.io/sardinka/map/">КАРТА МИРА (beta)</a></li>
-        <li class="toctree-l1"><a href="ts3server://sardinka.org?port=9987">ЗАЙТИ В ТС</a></li>
-        <li class="toctree-l1"><a href="https://qiwi.me/sardinka">ПОМОЧЬ ПРОЕКТУ</a></li>
+      </main>
       
-        <li class="toctree-l1"><a href="https://mairc.github.io/ts/">МОНИТОРИНГ ТС</a></li>
-      
-    </ul>
+        
+<footer class="md-footer">
   
-</nav>
-
-
-      </div>
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../ooc/rules/" title="Правилами создания и развития персонажа" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Правилами создания и развития персонажа
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../gcs-1/" title="Часть 1" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Часть 1
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-    <div class="clearer"></div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyleft &copy; 2016 - 2020 Mairc, Paul, Yurii, Anton, Maria and al.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://t.me/mairc" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
+      </a>
+    
   </div>
 
-  
-    <div class="footer">
-        &copy; <a href="https://mairc.github.io/ooc/about-us/">2016 Mairc, Paul, Yurii, Anton, Maria and al.</a>
-        Licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC A-NC-SA 4.0</a>, unless otherwise noted.
     </div>
-  
-
-<script>
-    var sidebarAnchors = new AnchorJS({
-      placement: 'left',
-      visible: 'hover',
-      icon: '¶',
-    });
-    sidebarAnchors.add('div.body p');
-    sidebarAnchors.add('div.body h1');
-    sidebarAnchors.add('div.body h2');
-    sidebarAnchors.add('div.body h3');
-    sidebarAnchors.add('div.body li');
-  </script>
-
-  <!--
-  MkDocs version      : 0.16.0
-  Docs Build Date UTC : 2017-06-18 14:10:41
-  -->
-
-</body>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.de50e36d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.38f5c9b5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
 </html>
